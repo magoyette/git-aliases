@@ -1,0 +1,11 @@
+# Eclipse
+.settings/
+.checkstyle
+.metadata/
+.project
+.tern-project
+
+# Emacs
+\#*\#
+.\#*
+.projectile

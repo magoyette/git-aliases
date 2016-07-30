@@ -12,7 +12,7 @@ chmod a+x ./setup-git.sh
 ## Installation on Windows
 
 ```bat
-./configure-git-aliases.bat
+./setup-git.bat
 ```
 
 ## Settings

@@ -19,12 +19,12 @@ chmod a+x ./setup-git.sh
 
 The following settings are set:
 - .gitconfig-setup/.gitignore for the global exclusions
-- Marc-André Goyette as the user.name
-- emacs as the editor
 - diff3 to see the common ancestor when resolving conflicts
 
-The following settings must be set manually, since they vary:
+The following settings need be set manually:
+- user.name
 - user.email
+- core.editor
 - credential.helper
 
 ## Git aliases

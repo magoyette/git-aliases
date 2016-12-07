@@ -1,0 +1,146 @@
+* Git
+** Help
+*** Display documentation about command
+**** git [command] --help
+** Config (read)
+*** List repository options
+**** git config -l
+*** List global options
+**** git config --global -l
+*** Show the origin of a configuration options
+**** git config --show-origin [key]
+** Config (write)
+*** Configure name
+**** git config --global user.name [name]
+*** Configure email
+**** git config --global user.email [email]
+*** Always ask for name and email
+**** git config --global user.useconfigonly true
+*** Configure Emacs as editor
+**** git config --global core.editor emacs
+*** Set diff3 conflict style
+**** git config --global merge.conflictstyle diff3
+** Repository
+*** Create a Git repo in current folder
+**** git init
+** Log
+*** List commits in reverse chronological order
+**** git log
+***** -[N] : show last N commits
+***** -p : show diff of each commits
+***** --stat : display summary of changes for each commits
+***** --pretty=[format] : oneline, short, full, fuller
+***** --graph : add graph with branches and merges
+***** --grep=[pattern] : search in the message of each commits
+***** --invert-grep --grep=[pattern] : search for commits that doesn't match the pattern
+***** -S [string] : search in the code of each commits
+** Status
+**** git status : status of files
+***** -s : 2 characters status
+****** ?? : file that isn't tracked
+****** A  : new file that has been staged
+****** M  : modified file that has been staged
+******  M : modified file that has not been staged
+****** MM : modified file that was staged, then modified again and not staged
+** Commit
+*** Track new file or stage modified file
+**** git add [file]
+*** Commit
+**** git commit
+***** -m "message" : include commit message inline
+***** --amend : modify the last commit with the changes in stage
+***** --amend --reset-author : Reset author of last commit
+*** Remove a file from the tracked files and working copy
+**** git rm [file]
+*** Remove a file with changes that were staged
+**** git rm -f [file]
+*** Remove a file from stage but keep file in the working tree
+**** git rm --cached [file]
+*** Unstage the file, but keep it as modified
+**** git reset HEAD [file]
+*** Revert a file
+**** git checkout -- [file]
+** Branch and merge
+*** List branches
+**** git branch
+***** -v : show last commit on each branch
+***** --merged : show branches merged on current branch
+***** --no-merged : show branches not merged on current branch
+*** Create a new branch based on HEAD
+**** git branch [branch-name]
+*** Delete a branch
+**** git branch -d [branch-name]
+*** Move HEAD to a branch (modify files in working directory)
+**** git checkout [branch-name]
+*** Branch and checkout
+**** git checkout -b [branch-name]
+*** Merge a branch
+**** git merge [branch-name]
+***** fast-forward : when merging a branch ahead of HEAD with no other branches
+***** recursive strategy : 3 way merge with common ancestor, require a merge commit
+*** Resolve a conflict (after editing a file)
+**** git add [file]
+*** Resolve a conflict with a graphical tool
+**** git mergetool
+*** Finalize a merge commit
+**** git commit
+*** Rebase (replay changes from current branch on top of [branch-name])
+**** git rebase [branch-name] : rebase current branch on top of [branch-name]
+*** Rebase on top of master
+**** git checkout [branch-name]
+**** git rebase master
+*** Merge on master
+**** git checkout master
+**** git merge [branch-name]
+** Diff
+*** View changes not in stage
+**** git diff
+***** --check : check for whitespace issues before commit
+***** --staged : view changes in stage
+*** Open external diff tool
+**** git difftool
+** Remote
+*** List remote repositories (with urls)
+**** git remote -v
+*** Show infos about a remote
+**** git remote show [remote-name]
+*** Clone a repository
+**** git clone [url] [optional-name]
+*** Clone a repository (use a local clone to improve performance)
+**** git clone --reference [relative-path] --dissociate [url]
+*** Fetch changes from the remote without merging them
+**** git fetch [remote-name]
+*** Fetch then merge changes from remote (can omit arguments if branch configured for git pull)
+**** git pull [remote-name] [branch-name]
+*** Push changes to remote (can omit arguments if ref configured for git push)
+**** git push [remote-name] [branch-name]
+***** --atomic : push a set of refs atomically
+***** -u : set upstream reference for tracking
+*** Create a remote branch
+**** git checkout -b [new-branch] [start-pointer]
+**** git push origin [new-branch]
+** Tags
+*** List tags
+**** git tag
+***** -l [pattern] : search for a pattern
+*** Tag a commit
+**** git tag -a [tagName] [optional-commit-checksum]
+***** -m "Tag message"
+*** Show information about tag
+**** git show [tagName]
+*** Push a tag to a remote
+**** git push [remote-name] [tagName]
+*** Push all tags to remote
+**** git push [remote-name] --tags
+** Good practices
+*** Commit message
+**** Begins with a capital letter
+**** The first line is a summary with a maximum length of 50 characters
+**** The body is optional and each of its line has a maximum length of 72 characters
+**** A blank line separates the summary and the body
+** .gitignore
+*** Glob patterns
+**** ? * [abc] [a-c]
+**** ! : negation
+**** / : at the end of a path for a directory
+**** # : comment

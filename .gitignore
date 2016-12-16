@@ -1,7 +1,8 @@
 # Eclipse
 .settings/
-.checkstyle
 .metadata/
+.checkstyle
+.classpath
 .project
 .tern-project
 

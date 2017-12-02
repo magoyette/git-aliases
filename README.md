@@ -2,6 +2,8 @@
 
 My personal Git setup, for Linux and Windows.
 
+Archived, since I'm now using Emacs's [magit](https://magit.vc/).
+
 ## Installation on Linux
 
 ```sh

@@ -46,6 +46,8 @@ git config --global alias.st 'stash'
 git config --global alias.sta 'stash apply'
 git config --global alias.stl 'stash list'
 git config --global alias.stp 'stash pop'
+git config --global alias.sts 'stash show -u'
+git config --global alias.std 'stash show -u -p'
 git config --global alias.stu 'stash -u'
 
 git config --global alias.unm 'checkout --'

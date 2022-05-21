@@ -51,6 +51,7 @@ git config --global alias.rel 'remote -v'
 git config --global alias.reo 'remote show origin'
 
 git config --global alias.s 'status'
+git config --global alias.ss 'status -s'
 git config --global alias.st 'stash'
 git config --global alias.sta 'stash apply'
 git config --global alias.stl 'stash list'

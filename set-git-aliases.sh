@@ -16,6 +16,7 @@ git config --global alias.ap 'add -p'
 git config --global alias.at 'add -u'
 
 git config --global alias.br 'branch'
+git config --global alias.bra 'branch -a'
 git config --global alias.brc 'checkout -b'
 git config --global alias.brd 'branch -d'
 

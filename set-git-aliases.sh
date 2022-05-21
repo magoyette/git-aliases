@@ -1,5 +1,13 @@
 #!/bin/bash
 
+read -p "Do you want to remove all Git aliases before setting the aliases from this script (Y/N)? " -r
+echo
+
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    git config --global --remove-section alias
+fi
+
 git config --global alias.a 'add'
 git config --global alias.aa 'add -A'
 git config --global alias.ai 'add -i'

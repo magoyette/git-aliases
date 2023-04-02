@@ -21,6 +21,7 @@ git config --global alias.brc 'checkout -b'
 git config --global alias.brd 'branch -d'
 
 git config --global alias.ch 'checkout'
+git config --global alias.clean 'clean -fdxn'
 git config --global alias.co 'commit'
 git config --global alias.coa 'commit --amend'
 

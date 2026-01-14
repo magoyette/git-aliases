@@ -43,6 +43,7 @@ git config --global alias.pl 'pull'
 git config --global alias.plr 'pull --rebase'
 git config --global alias.ps 'push'
 git config --global alias.psf 'push -f'
+git config --global alias.pso 'push --set-upstream origin'
 
 git config --global alias.rb 'rebase'
 git config --global alias.rbi 'rebase -i'
